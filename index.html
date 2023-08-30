@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .customStyle{
+            /* margin-top: 30px; */
+            padding: 5px 30px;
+            background: #216e78;
+            border: 1px solid #216e78;
+            color: #FFFFFF;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            letter-spacing: 1px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .customStyle:hover{
+            border: 1px solid #216e78;
+            background: #FFFFFF;
+            color: #216e78;
+        }
+        
+        .form-control{
+            border: 1px solid #216e78;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .form-control:focus{
+            box-shadow: none;
+            border: 1px solid #216e78;
+        }
+
+        .justifyCenter{
+            justify-content: center;
+        }
+        .fa-pen-to-square{
+            color: red;
+        }
+        .fa-trash{
+            color: rgb(2, 150, 236);
+        }
+
+        .table thead{
+            background: #49b5da;
+            color: #FFFFFF;
+        }
+
+        .heading{
+            text-align: center;
+        }
+        .heading h2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+        }
+
+        th{
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
+
+        .textLeft{
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="heading">
+                    <h2>TODO LIST</h2>
+                </div>
+            </div>
+            <div class="col-md-12 mt-3">
+                <div class="card p-5">
+                    <div class="row justifyCenter">
+                        <div class="col-md-5" style="display:flex;">
+                            <input type="text" id="writeText" class="form-control">
+                            <input type="button" id="addBtn" class="customStyle" onclick="addTodo()" value="Add">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-3" id="displayUpdate" style="display: none;">
+                <div class="card p-5">
+                    <div class="row justifyCenter">
+                        <div class="col-md-5" style="display:flex;">
+                            <input type="text" id="recordUpdate" class="form-control">
+                            <input type="button" id="addBtn" class="customStyle" onclick="updateRecord()" value="Add">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-3" id="renderCard" style="display: none;">
+                <div class="card p-5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="textLeft">Name</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="renderText"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./practice.js"></script>
+</body>
+</html>
